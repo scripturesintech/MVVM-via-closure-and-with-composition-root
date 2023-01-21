@@ -29,19 +29,11 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
         self.viewModel.loopingIn { quote in
             self.view.backgroundColor = .random
             self.messageLabel.text = quote.quote
         }
         
-        
-//        self.viewModel.loopingIn { quote in
-//            DispatchQueue.main.async {
-//                self.view.backgroundColor = .random
-//                self.messageLabel.text = quote.quote
-//            }
-//        }
     }
 }
 
